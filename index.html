@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类</title>
+</head>
+<body>
+<div id = "app">
+    <p>以下为v-model双向绑定</p>
+    <input type="text" v-model = "message.tx">
+    <div>{{message.tx}}</div>
+    <ul><li></li></ul>
+    <p>以下为v-bind单向绑定</p>
+    <input type="text" v-bind = "message.tx">
+    {{a}}
+</div>
+<script src="src/Watcher.js"></script>
+<script src="src/Observer.js"></script>
+<script src="src/Compile.js"></script>
+<script src="src/MVVM.js"></script>
+<script>
+    let vm = new MVVM({
+        el:'#app',
+        data:{
+            message:{
+                tx:'sm',
+                tx2:'smm'
+            },
+            a:1,
+            b:'sssm',
+        }
+    })
+</script>
+
+</body>
+</html>
